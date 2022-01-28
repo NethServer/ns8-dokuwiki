@@ -56,3 +56,7 @@ To uninstall the instance and remove traefik virtual host:
 ```
 remove-module dokuwiki1 --no-preserve
 ```
+
+## API reference
+
+See https://github.com/NethServer/ns8-dokuwiki/tree/apidoc
