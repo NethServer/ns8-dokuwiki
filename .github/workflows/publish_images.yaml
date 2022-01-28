@@ -1,0 +1,37 @@
+name: dokuwiki
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: ['opened', 'synchronize']
+
+jobs:
+  publish_images:
+    env:
+      IMAGETAG: ${{ github.head_ref }}
+      REPOBASE: ghcr.io/${{ github.repository_owner }}
+    name: 'Publish images for ${{ github.workflow }}'
+    runs-on: ubuntu-latest
+    steps:
+      - id: checkout
+        uses: actions/checkout@v2
+      - id: yarn-cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            ui/node_modules
+          key: "yarn-${{ hashFiles('ui/yarn.lock') }}"
+      - id: build
+        name: "Build the images"
+        run: |
+          # Build the images
+          bash build-image.sh
+      - id: publish
+        name: "Publish the images"
+        run: |
+          # Publish the images
+          set -e
+          trap 'buildah logout ghcr.io' EXIT
+          buildah login -u ${{ github.actor }} --password-stdin ghcr.io <<<"${{ secrets.GITHUB_TOKEN }}"
+          for image in ${{ steps.build.outputs.images }} ; do buildah push $image docker://${image}:${IMAGETAG:-latest} ; done

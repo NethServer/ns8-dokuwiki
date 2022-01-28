@@ -6,7 +6,8 @@ set -e
 # Prepare variables for later user
 images=()
 # The image willbe pushed to GitHub image registry under nethserver organization
-repobase="${REPOBASE:-ghcr.io/nethserver}"
+repobase="${REPOBASE,,}"
+repobase="${repobase:-ghcr.io/nethserver}"
 # Configure the image name
 reponame="dokuwiki"
 
