@@ -41,9 +41,6 @@
     "configuring": "Configuring...",
     "email_format": "Invalid email address"
   },
-  "logs": {
-    "title": "Logs"
-  },
   "about": {
     "title": "About"
   },
