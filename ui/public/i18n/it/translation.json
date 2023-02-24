@@ -15,13 +15,20 @@
         "no_volumes": "Nessun volume",
         "app_images": "Immagine app|Immagini app",
         "app_instance": "Istanza app",
-        "app_volumes": "Volume app|Volumi app"
+        "app_volumes": "Volume app|Volumi app",
+        "installation_node": "Nodo",
+        "mount": "Percorso di mount"
     },
     "common": {
-        "required": "Obbligatorio"
+        "required": "Obbligatorio",
+        "work_in_progress": "In lavorazione"
     },
     "action": {
-        "configure-module": "Configura modulo"
+        "configure-module": "Configura modulo",
+        "get-configuration": "Visualizza configurazione",
+        "get-module-info": "Visualizza info modulo",
+        "get-status": "Visualizza stato",
+        "get-name": "Visualizza nome"
     },
     "error": {
         "error": "Errore",
