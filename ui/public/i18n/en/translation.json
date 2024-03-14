@@ -21,9 +21,9 @@
     "no_services": "No services",
     "no_images": "No images",
     "no_volumes": "No volumes",
-    "dokuwiki_webapp": "DokuWiki webapp",
+    "dokuwiki_webapp": "Dokuwiki webapp",
     "not_configured": "Not configured",
-    "open_webapp": "Open webapp",
+    "open_webapp": "Open Dokuwiki",
     "configure": "Configure"
   },
   "settings": {
