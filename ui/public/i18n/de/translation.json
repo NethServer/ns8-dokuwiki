@@ -38,8 +38,8 @@
         "save": "Speichern",
         "lets_encrypt": "Let's Encrypt",
         "http_to_https": "HTTP zu HTTPS",
-        "enabled": "Aktiviert",
-        "disabled": "Deaktiviert",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
         "host_pattern": "Voll-qualifizierter Domänen-Name (FQDN) erforderlich",
         "host_format": "Voll-qualifizierter Domänen-Name (FQDN) erforderlich"
     },
