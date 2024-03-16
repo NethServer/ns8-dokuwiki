@@ -47,7 +47,8 @@
         "no_volumes": "Sin volúmenes",
         "not_configured": "No configurado",
         "open_webapp": "Abrir Dokuwiki",
-        "configure": "Configurar"
+        "configure": "Configurar",
+        "dokuwiki_webapp": "Aplicación web Dokuwiki"
     },
     "action": {
         "configure-module": "Configurar el módulo",
