@@ -5,20 +5,22 @@
         "wiki_name": "Nombre Wiki",
         "admin_full_name": "Nombre completo del administrador",
         "configuring": "Configurando...",
-        "disabled": "Disabled",
+        "disabled": "Deshabilitado",
         "instance_configuration": "Configurar {instance}",
         "http_to_https": "HTTP a HTTPS",
         "admin_password": "Contraseña de administrador",
         "lets_encrypt": "Let's Encrypt",
         "email_format": "Dirección de correo no válida",
         "save": "Guardar",
-        "enabled": "Enabled",
+        "enabled": "Habilitado",
         "show_password": "Mostrar contraseña",
         "title": "Ajustes",
         "hide_password": "Ocultar contraseña",
         "admin_email": "Dirección de correo electrónico de administrador",
         "host_pattern": "Debe ser un nombre de dominio válido y completo",
-        "host_format": "Debe ser un nombre de dominio válido y completo"
+        "host_format": "Debe ser un nombre de dominio válido y completo",
+        "must_be_configured_inside_dokuwiki": "En esta página sólo es posible configurar el FQDN de Dokuwiki. Otros parámetros se configuran directamente en la aplicación web Dokuwiki.",
+        "go_to_dokuwiki": "Ir a Dokuwiki"
     },
     "common": {
         "required": "Obligatorio",
@@ -41,7 +43,9 @@
         "no_services": "Sin servicios",
         "inactive_services": "{num} servicio inactivo | {num} servicios inactivos",
         "mount": "Montar",
-        "no_volumes": "Sin volúmenes"
+        "no_volumes": "Sin volúmenes",
+        "not_configured": "No configurado",
+        "open_webapp": "Abrir Dokuwiki"
     },
     "action": {
         "configure-module": "Configurar el módulo",
