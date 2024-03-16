@@ -20,7 +20,8 @@
         "host_pattern": "Debe ser un nombre de dominio válido y completo",
         "host_format": "Debe ser un nombre de dominio válido y completo",
         "must_be_configured_inside_dokuwiki": "En esta página sólo es posible configurar el FQDN de Dokuwiki. Otros parámetros se configuran directamente en la aplicación web Dokuwiki.",
-        "go_to_dokuwiki": "Ir a Dokuwiki"
+        "go_to_dokuwiki": "Ir a Dokuwiki",
+        "dokuwiki_note": "Nota"
     },
     "common": {
         "required": "Obligatorio",
@@ -45,7 +46,8 @@
         "mount": "Montar",
         "no_volumes": "Sin volúmenes",
         "not_configured": "No configurado",
-        "open_webapp": "Abrir Dokuwiki"
+        "open_webapp": "Abrir Dokuwiki",
+        "configure": "Configurar"
     },
     "action": {
         "configure-module": "Configurar el módulo",
@@ -64,7 +66,8 @@
         "error": "Error",
         "404": "Recurso no encontrado",
         "network_error": "Fallo de red",
-        "validation_error": "Fallo en la validación"
+        "validation_error": "Fallo en la validación",
+        "cannot_retrieve_configuration": "No se puede recuperar la configuración"
     },
     "about": {
         "title": "Acerca de"
