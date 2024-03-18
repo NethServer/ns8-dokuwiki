@@ -18,7 +18,11 @@
         "lets_encrypt": "Let's Encrypt",
         "save": "Save",
         "enabled": "Enabled",
-        "title": "Settings"
+        "title": "Settings",
+        "host_format": "Must be a valid fully qualified domain name",
+        "instance_configuration": "Configure {instance}",
+        "email_format": "Invalid email address",
+        "host_pattern": "Must be a valid fully qualified domain name"
     },
     "common": {
         "required": "Required",
