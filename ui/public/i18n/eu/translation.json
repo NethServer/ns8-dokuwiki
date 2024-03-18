@@ -38,7 +38,9 @@
         "lets_encrypt": "Let's Encrypt",
         "save": "Save",
         "enabled": "Enabled",
-        "title": "Settings"
+        "title": "Settings",
+        "host_format": "Must be a valid fully qualified domain name",
+        "host_pattern": "Must be a valid fully qualified domain name"
     },
     "about": {
         "title": "Honi buruz"
