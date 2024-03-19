@@ -2,7 +2,7 @@
     "settings": {
         "save": "Salva",
         "title": "Impostazioni",
-        "disabled": "Disabled",
+        "disabled": "Disabilitato",
         "http_to_https": "Da HTTP a HTTPS",
         "admin_username": "Nome utente dell'amministratore",
         "admin_email": "Indirizzo e-mail dell'amministratore",
@@ -11,7 +11,7 @@
         "configuring": "Configurazione...",
         "admin_password": "Password amministratore",
         "hide_password": "Nascondi password",
-        "enabled": "Enabled",
+        "enabled": "Abilitato",
         "instance_configuration": "Configura {instance}",
         "email_format": "Indirizzo e-mail non valido",
         "lets_encrypt": "Let's Encrypt",
