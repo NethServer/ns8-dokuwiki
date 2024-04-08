@@ -2,7 +2,7 @@
     "settings": {
         "save": "Salva",
         "title": "Impostazioni",
-        "disabled": "Disabilitato",
+        "disabled": "Disabled",
         "http_to_https": "Da HTTP a HTTPS",
         "admin_username": "Nome utente dell'amministratore",
         "admin_email": "Indirizzo e-mail dell'amministratore",
@@ -11,7 +11,7 @@
         "configuring": "Configurazione...",
         "admin_password": "Password amministratore",
         "hide_password": "Nascondi password",
-        "enabled": "Abilitato",
+        "enabled": "Enabled",
         "instance_configuration": "Configura {instance}",
         "email_format": "Indirizzo e-mail non valido",
         "lets_encrypt": "Let's Encrypt",
@@ -48,7 +48,7 @@
         "get-configuration": "Visualizza configurazione",
         "get-module-info": "Visualizza info modulo",
         "get-status": "Visualizza stato",
-        "get-name": "Visualizza nome"
+        "get-name": "Get name"
     },
     "error": {
         "error": "Errore",
