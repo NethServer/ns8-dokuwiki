@@ -48,7 +48,7 @@
         "get-configuration": "Visualizza configurazione",
         "get-module-info": "Visualizza info modulo",
         "get-status": "Visualizza stato",
-        "get-name": "Get name"
+        "get-name": "Visualizza nome"
     },
     "error": {
         "error": "Errore",
