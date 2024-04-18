@@ -9,7 +9,8 @@
         "network_timeout": "Network timeout",
         "404": "Resource not found",
         "network_error": "Network error",
-        "validation_error": "Validation error"
+        "validation_error": "Validation error",
+        "cannot_retrieve_configuration": "Cannot retrieve configuration"
     },
     "settings": {
         "configuring": "Configuring...",
@@ -42,7 +43,8 @@
         "title": "Status",
         "installation_node": "Installation node",
         "node": "Node",
-        "no_volumes": "No volumes"
+        "no_volumes": "No volumes",
+        "configure": "Configure"
     },
     "about": {
         "title": "About"
