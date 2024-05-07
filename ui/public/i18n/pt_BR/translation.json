@@ -44,7 +44,10 @@
         "installation_node": "Installation node",
         "node": "Node",
         "no_volumes": "No volumes",
-        "configure": "Configure"
+        "configure": "Configure",
+        "active_services": "{num} active service | {num} active services",
+        "inactive_services": "{num} inactive service | {num} inactive services",
+        "failed_services": "{num} failed service | {num} failed services"
     },
     "about": {
         "title": "About"
