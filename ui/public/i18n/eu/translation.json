@@ -13,7 +13,11 @@
         "mount": "Mount",
         "installation_node": "Installation node",
         "node": "Node",
-        "no_volumes": "No volumes"
+        "no_volumes": "No volumes",
+        "configure": "Configure",
+        "failed_services": "{num} failed service | {num} failed services",
+        "active_services": "{num} active service | {num} active services",
+        "inactive_services": "{num} inactive service | {num} inactive services"
     },
     "error": {
         "403": "Operation not authorized",
@@ -25,7 +29,8 @@
         "network_timeout": "Network timeout",
         "404": "Resource not found",
         "network_error": "Network error",
-        "validation_error": "Validation error"
+        "validation_error": "Validation error",
+        "cannot_retrieve_configuration": "Cannot retrieve configuration"
     },
     "common": {
         "required": "Beharrezkoa",
@@ -38,7 +43,11 @@
         "lets_encrypt": "Let's Encrypt",
         "save": "Save",
         "enabled": "Enabled",
-        "title": "Settings"
+        "title": "Settings",
+        "host_format": "Must be a valid fully qualified domain name",
+        "host_pattern": "Must be a valid fully qualified domain name",
+        "instance_configuration": "Configure {instance}",
+        "email_format": "Invalid email address"
     },
     "about": {
         "title": "Honi buruz"
