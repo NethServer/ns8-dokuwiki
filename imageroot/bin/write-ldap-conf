@@ -57,7 +57,7 @@ EOF
 fi
 cat <<EOF >> dokuwiki-config/local.protected.php
 \$conf['useacl'] = 1;
-\$conf['superuser'] = 'admin,admin@${LDAP_DOMAIN},administrator,administrator@${LDAP_DOMAIN}';
+\$conf['superuser'] = '@admin,@domain\ admins';
 EOF
 
 echo "Configuration written to dokuwiki-config/local.protected.php"
