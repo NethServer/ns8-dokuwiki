@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SSHLibrary
+Resource    api.resource
 
 *** Test Cases ***
 Check if dokuwiki is installed correctly
@@ -10,7 +11,7 @@ Check if dokuwiki is installed correctly
     Set Suite Variable    ${module_id}    ${output.module_id}
 
 Check if dokuwiki can be configured
-    ${rc} =    Execute Command    api-cli run module/${module_id}/configure-module --data '{"wiki_name": "mywiki","username":"admin","password":"admin","email":"admin@test.local","user_full_name":"Admin","host":"dokuwiki.test.local","http2https": true,"lets_encrypt": false}'
+    ${rc} =    Execute Command    api-cli run module/${module_id}/configure-module --data '{"wiki_name": "mywiki","username":"admin","password":"admin","email":"admin@test.local","user_full_name":"Admin","host":"dokuwiki.test.local","http2https": true,"lets_encrypt": false, "ldap_domain": "domain.com"}'
     ...    return_rc=True  return_stdout=False
     Should Be Equal As Integers    ${rc}  0
 
