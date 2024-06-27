@@ -1,26 +1,26 @@
 {
     "common": {
-        "required": "Erforderlich",
-        "work_in_progress": "in Arbeit"
+        "required": "Required",
+        "work_in_progress": "Work in progress"
     },
     "status": {
         "title": "Status",
-        "node": "Knoten",
-        "installation_node": "Installations-Knoten",
-        "app_instance": "App-Instanz",
-        "services": "Dienst | Dienste",
-        "app_images": "App Abbild | App Abbilder",
-        "app_volumes": "App Volumen | App Volumen",
+        "node": "Node",
+        "installation_node": "Installation node",
+        "app_instance": "App instance",
+        "services": "Service | Services",
+        "app_images": "App image | App images",
+        "app_volumes": "App volume | App volumes",
         "failed_services": "{num} Dienst fehlerhaft | {num} Dienste fehlerhaft",
         "active_services": "{num} aktiver Dienst | {num} aktive Dienste",
         "inactive_services": "{num} inaktiver Dienst | {num} inaktive Dienste",
         "name": "Name",
-        "size": "Größe",
-        "created": "Erstellt",
-        "mount": "Einhängepunkt",
-        "no_services": "Keine Dienste",
-        "no_images": "Keine Abbilder",
-        "no_volumes": "Keine Volumen",
+        "size": "Size",
+        "created": "Created",
+        "mount": "Mount",
+        "no_services": "No services",
+        "no_images": "No images",
+        "no_volumes": "No volumes",
         "dokuwiki_webapp": "DokuWiki Webanwendung",
         "not_configured": "nicht konfiguriert",
         "open_webapp": "DokuWiki öffnen",
@@ -31,7 +31,7 @@
         "instance_configuration": "{instance} konfigurieren",
         "configuring": "Konfiguriere...",
         "email_format": "E-Mail Adresse fehlerhaft",
-        "title": "Einstellungen",
+        "title": "Settings",
         "admin_username": "Administrator Anwendername",
         "admin_email": "Administrator E-Mailadresse",
         "admin_password": "Administrator-Passwort",
@@ -39,11 +39,11 @@
         "wiki_fqdn": "Wiki FQDN",
         "show_password": "Passwort anzeigen",
         "hide_password": "Passwort verbergen",
-        "save": "Speichern",
+        "save": "Save",
         "lets_encrypt": "Let's Encrypt",
         "http_to_https": "HTTP zu HTTPS",
-        "enabled": "Aktiviert",
-        "disabled": "Deaktiviert",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
         "host_pattern": "Voll-qualifizierter Domänen-Name (FQDN) erforderlich",
         "host_format": "Voll-qualifizierter Domänen-Name (FQDN) erforderlich",
         "dokuwiki_note": "Hinweis",
@@ -55,29 +55,29 @@
         "must_be_configured_inside_dokuwiki": "Auf dieser Seite können nur der DokuWiki FQDN sowie die Authentifizierung konfiguriert werden. Weitere Einstellungen in der DokuWiki Webanwendung vornehmen"
     },
     "about": {
-        "title": "Über"
+        "title": "About"
     },
     "error": {
-        "generic_error": "Etwas ist schief gegangen",
-        "network_error": "Netzwerk-Fehler",
-        "network_timeout": "Netzwerk-Zeitüberschreitung",
-        "401": "Ungültige Authentifizierung",
-        "403": "Operation nicht genehmigt",
-        "cannot_retrieve_module_info": "Modul-Info kann nicht abgerufen werden",
-        "cannot_retrieve_installed_modules": "Installierte Module können nicht abgerufen werden",
-        "validation_error": "Überprüfungsfehler",
-        "error": "Fehler",
-        "404": "Ressource nicht gefunden",
+        "generic_error": "Something went wrong",
+        "network_error": "Network error",
+        "network_timeout": "Network timeout",
+        "401": "Invalid authentication",
+        "403": "Operation not authorized",
+        "cannot_retrieve_module_info": "Cannot retrieve module info",
+        "cannot_retrieve_installed_modules": "Cannot retrieve installed modules",
+        "validation_error": "Validation error",
+        "error": "Error",
+        "404": "Resource not found",
         "cannot_retrieve_configuration": "Konfiguration kann nicht abgerufen werden"
     },
     "task": {
-        "cannot_create_task": "Aufgabe {action} kann nicht erstellt werden"
+        "cannot_create_task": "Cannot create task {action}"
     },
     "action": {
-        "get-status": "Status abrufen",
-        "get-configuration": "Konfiguration abrufen",
-        "configure-module": "Modul konfigurieren",
-        "get-module-info": "Modul-Info abrufen",
-        "get-name": "Namen abrufen"
+        "get-status": "Get status",
+        "get-configuration": "Get configuration",
+        "configure-module": "Configure module",
+        "get-module-info": "Get module info",
+        "get-name": "Get name"
     }
 }
