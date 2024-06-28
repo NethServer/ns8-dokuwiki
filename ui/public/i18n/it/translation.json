@@ -18,7 +18,14 @@
         "admin_full_name": "Nome completo dell'amministratore",
         "wiki_name": "Nome Wiki",
         "host_pattern": "Deve essere un nome di dominio pienamente qualificato valido",
-        "host_format": "Deve essere un nome di dominio pienamente qualificato valido"
+        "host_format": "Deve essere un nome di dominio pienamente qualificato valido",
+        "dokuwiki_note": "Note",
+        "go_to_dokuwiki": "Go to Dokuwiki",
+        "must_be_configured_inside_dokuwiki": "You can configure only Dokuwiki FQDN and authentication in this page. To configure other setting go to Dokuwiki webapp",
+        "ldap_domain": "LDAP domain",
+        "choose_the_ldap_domain_to_authenticate_users": "Choose the LDAP domain to authenticate users, or use the internal authentication",
+        "choose_ldap_domain": "Choose LDAP domain",
+        "internal_authentication": "Internal authentication"
     },
     "status": {
         "no_images": "Nessuna immagine",
@@ -37,7 +44,11 @@
         "mount": "Percorso di mount",
         "active_services": "{num} servizio attivo | {num} servizi attivi",
         "failed_services": "{num} servizio fallito | {num} servizi falliti",
-        "inactive_services": "{num} servizio inattivo | {num} servizi inattivi"
+        "inactive_services": "{num} servizio inattivo | {num} servizi inattivi",
+        "open_webapp": "Open Dokuwiki",
+        "configure": "Configure",
+        "not_configured": "Not configured",
+        "dokuwiki_webapp": "Dokuwiki webapp"
     },
     "common": {
         "required": "Obbligatorio",
@@ -60,7 +71,8 @@
         "generic_error": "Qualcosa è andato storto",
         "401": "Autenticazione non valida",
         "network_timeout": "Timeout di rete",
-        "403": "Operazione non autorizzata"
+        "403": "Operazione non autorizzata",
+        "cannot_retrieve_configuration": "Cannot retrieve configuration"
     },
     "about": {
         "title": "Informazioni"
