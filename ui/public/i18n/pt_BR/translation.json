@@ -23,7 +23,22 @@
         "host_format": "Must be a valid fully qualified domain name",
         "instance_configuration": "Configure {instance}",
         "email_format": "Invalid email address",
-        "host_pattern": "Must be a valid fully qualified domain name"
+        "host_pattern": "Must be a valid fully qualified domain name",
+        "go_to_dokuwiki": "Go to Dokuwiki",
+        "dokuwiki_note": "Note",
+        "must_be_configured_inside_dokuwiki": "You can configure only Dokuwiki FQDN and authentication in this page. To configure other setting go to Dokuwiki webapp",
+        "ldap_domain": "LDAP domain",
+        "internal_authentication": "Internal authentication",
+        "wiki_name": "Wiki name",
+        "wiki_fqdn": "Wiki FQDN",
+        "admin_username": "Administrator username",
+        "admin_email": "Administrator email address",
+        "admin_password": "Administrator password",
+        "admin_full_name": "Administrator full name",
+        "show_password": "Show password",
+        "hide_password": "Hide password",
+        "choose_the_ldap_domain_to_authenticate_users": "Choose the LDAP domain to authenticate users, or use the internal authentication",
+        "choose_ldap_domain": "Choose LDAP domain"
     },
     "common": {
         "required": "Required",
@@ -47,7 +62,10 @@
         "configure": "Configure",
         "active_services": "{num} active service | {num} active services",
         "inactive_services": "{num} inactive service | {num} inactive services",
-        "failed_services": "{num} failed service | {num} failed services"
+        "failed_services": "{num} failed service | {num} failed services",
+        "dokuwiki_webapp": "Dokuwiki webapp",
+        "open_webapp": "Open Dokuwiki",
+        "not_configured": "Not configured"
     },
     "about": {
         "title": "About"
