@@ -37,7 +37,10 @@
         "configure": "Configure",
         "failed_services": "{num} failed service | {num} failed services",
         "active_services": "{num} active service | {num} active services",
-        "inactive_services": "{num} inactive service | {num} inactive services"
+        "inactive_services": "{num} inactive service | {num} inactive services",
+        "not_configured": "Not configured",
+        "dokuwiki_webapp": "Dokuwiki webapp",
+        "open_webapp": "Open Dokuwiki"
     },
     "settings": {
         "configuring": "Configuring...",
@@ -50,7 +53,22 @@
         "host_pattern": "Must be a valid fully qualified domain name",
         "instance_configuration": "Configure {instance}",
         "email_format": "Invalid email address",
-        "host_format": "Must be a valid fully qualified domain name"
+        "host_format": "Must be a valid fully qualified domain name",
+        "show_password": "Show password",
+        "hide_password": "Hide password",
+        "dokuwiki_note": "Note",
+        "go_to_dokuwiki": "Go to Dokuwiki",
+        "must_be_configured_inside_dokuwiki": "You can configure only Dokuwiki FQDN and authentication in this page. To configure other setting go to Dokuwiki webapp",
+        "ldap_domain": "LDAP domain",
+        "choose_the_ldap_domain_to_authenticate_users": "Choose the LDAP domain to authenticate users, or use the internal authentication",
+        "internal_authentication": "Internal authentication",
+        "choose_ldap_domain": "Choose LDAP domain",
+        "wiki_name": "Wiki name",
+        "wiki_fqdn": "Wiki FQDN",
+        "admin_full_name": "Administrator full name",
+        "admin_username": "Administrator username",
+        "admin_email": "Administrator email address",
+        "admin_password": "Administrator password"
     },
     "action": {
         "get-module-info": "Get module info",
