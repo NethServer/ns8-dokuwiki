@@ -25,7 +25,7 @@ ExecStart=/usr/bin/podman run --conmon-pidfile %t/dokuwiki.pid \
     --replace --name dokuwiki -d \
     --env-file=%S/state/environment \
     --publish 127.0.0.1:${TCP_PORT}:8080 \
-    --volume dokuwiki-data:/bitnami/dokuwiki:z \
+    --volume dokuwiki-data:/storage:z \
     --network=slirp4netns:allow_host_loopback=true \
     --add-host=accountprovider:10.0.2.2 \
     ${DOKUWIKI_IMAGE}
