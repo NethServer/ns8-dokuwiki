@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#
+# Copyright (C) 2025 Nethesis S.r.l.
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+
+if podman exec dokuwiki ls /storage/conf/local.php >/dev/null 2>&1; then
+    echo "First Configuration done. We push custom configuration files for authentication."
+    podman cp ./dokuwiki-config/local.protected.php dokuwiki:/storage/conf/local.protected.php
+    podman cp ./dokuwiki-config/plugins.local.php dokuwiki:/storage/conf/plugins.local.php
+else
+    echo "First configuration is not done, we push the whole configuration directory."
+    podman cp ./dokuwiki-config/. dokuwiki:/storage/conf/
+fi
