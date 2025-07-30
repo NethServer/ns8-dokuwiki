@@ -50,6 +50,16 @@ The above command will:
 - start and configure the Dokuwiki instance
 - configure a virtual host for trafik to access the instance
 
+## PHP settings
+
+you can modify in the environment file some PHP settings, you need to restart the container after the modification
+
+```
+PHP_MEMORYLIMIT=512M
+PHP_TIMEZONE=UTC
+PHP_UPLOADLIMIT=256M
+```
+
 ## Uninstall
 
 To uninstall the instance and remove traefik virtual host:
