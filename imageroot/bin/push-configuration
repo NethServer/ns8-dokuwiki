@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#
+# Copyright (C) 2025 Nethesis S.r.l.
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+
+if ! podman exec dokuwiki ls /storage/conf/local.php >/dev/null 2>&1; then
+    echo "We init the first configuration of Dokuwiki by the install PHP script"
+    curl -s -o /dev/null -X POST "http://127.0.0.1:${TCP_PORT}/install.php" \
+        -d "d[title]=${DOKUWIKI_WIKI_NAME}" \
+        -d "d[acl]=1" \
+        -d "d[superuser]=${DOKUWIKI_USERNAME}" \
+        -d "d[fullname]=${DOKUWIKI_FULL_NAME}" \
+        -d "d[email]=${DOKUWIKI_EMAIL}" \
+        -d "d[password]=${DOKUWIKI_PASSWORD}" \
+        -d "d[confirm]=${DOKUWIKI_PASSWORD}" \
+        -d "d[policy]=1" \
+        -d "d[allowreg]=0" \
+        -d "d[license]=" \
+        -d "d[pop]=0" \
+        -d "submit=1"
+fi
+
+echo "We push the authentication files."
+podman cp ./dokuwiki-config/. dokuwiki:/storage/conf/
