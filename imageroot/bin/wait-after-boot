@@ -9,8 +9,8 @@
 
 count=0
 while [[ $count -lt 60 ]]; do
-    if podman exec -ti dokuwiki ls /bitnami/dokuwiki/conf/local.php.dist >/dev/null 2>&1; then
-        echo "First Configuration done. We push custom configuration files."
+    if podman exec dokuwiki ls /storage/conf/license.php >/dev/null 2>&1; then
+        echo "Dokuwiki container is ready."
         exit 0
     fi
     ((count++))
