@@ -63,7 +63,3 @@ agent.set_env("PHP_TIMEZONE", "UTC")
 
 # Setup LDAP domain
 agent.set_env("LDAP_DOMAIN", ldap_domain)
-
-# Make sure everything is saved inside the environment file
-# just before starting systemd unit
-agent.dump_env()
