@@ -39,7 +39,7 @@ config["wiki_name"] = os.getenv("DOKUWIKI_WIKI_NAME")
 config["username"] = os.getenv("DOKUWIKI_USERNAME");
 
 secrets = agent.read_envfile("secrets.env")
-config["password"] = secrets["DOKUWIKI_PASSWORD"]
+config["password"] = secrets.get("DOKUWIKI_PASSWORD")
 
 config["email"] = os.getenv("DOKUWIKI_EMAIL");
 config["user_full_name"] = os.getenv("DOKUWIKI_FULL_NAME");
