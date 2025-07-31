@@ -57,12 +57,9 @@ agent.set_env("DOKUWIKI_EMAIL", email)
 agent.set_env("DOKUWIKI_FULL_NAME", full_name)
 
 # Setup PHP with safe defaults
-agent.set_env("PHP_ENABLE_OPCACHE", "1")
-agent.set_env("PHP_MEMORY_LIMIT", "512M")
+agent.set_env("PHP_MEMORYLIMIT", "512M")
+agent.set_env("PHP_UPLOADLIMIT", "256M")
+agent.set_env("PHP_TIMEZONE", "UTC")
 
 # Setup LDAP domain
 agent.set_env("LDAP_DOMAIN", ldap_domain)
-
-# Make sure everything is saved inside the environment file
-# just before starting systemd unit
-agent.dump_env()
