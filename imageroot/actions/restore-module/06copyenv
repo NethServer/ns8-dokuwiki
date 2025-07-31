@@ -32,7 +32,6 @@ for evar in [
         "DOKUWIKI_EMAIL",
         "DOKUWIKI_FULL_NAME",
         "DOKUWIKI_IMAGE",
-        "DOKUWIKI_PASSWORD",
         "DOKUWIKI_USERNAME",
         "DOKUWIKI_WIKI_NAME",
         "PHP_ENABLE_OPCACHE",
