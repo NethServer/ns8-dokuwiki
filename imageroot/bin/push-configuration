@@ -7,6 +7,10 @@
 
 set -e 
 
+set -a
+source ./secrets.env
+set +a
+
 if ! podman exec dokuwiki ls /storage/conf/local.php >/dev/null 2>&1; then
     echo "We init the first configuration of Dokuwiki by the install PHP script"
     curl -s -o /dev/null -X POST "http://127.0.0.1:${TCP_PORT}/install.php" \
