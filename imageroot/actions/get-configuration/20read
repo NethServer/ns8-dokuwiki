@@ -38,7 +38,10 @@ env = f'module/{os.environ["MODULE_ID"]}/environment'
 rdb = agent.redis_connect()
 config["wiki_name"] = rdb.hget(env, "DOKUWIKI_WIKI_NAME")
 config["username"] = rdb.hget(env, "DOKUWIKI_USERNAME");
-config["password"] = rdb.hget(env, "DOKUWIKI_PASSWORD"); 
+
+secrets = agent.read_envfile("secrets.env")
+config["password"] = secrets["DOKUWIKI_PASSWORD"]
+
 config["email"] = rdb.hget(env, "DOKUWIKI_EMAIL");
 config["user_full_name"] = rdb.hget(env, "DOKUWIKI_FULL_NAME");
 config["host"] =  rdb.hget(env, "TRAEFIK_HOST");
