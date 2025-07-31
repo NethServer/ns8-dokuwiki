@@ -5,6 +5,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 
+set -e 
+
 # specific to dokuwiki, it creates its own configuration file after a long time boot 
 
 count=0

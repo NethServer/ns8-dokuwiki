@@ -5,6 +5,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 
+set -e 
+
 # Retrieving environment variables
 LDAP_DOMAIN=${LDAP_DOMAIN}
 LDAP_PORT=${LDAP_PORT}
