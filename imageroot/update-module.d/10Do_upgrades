@@ -1,15 +1,17 @@
-#!/bin/bash
+#!/usr/bin/env python3
 
 #
-# Copyright (C) 2023 Nethesis S.r.l.
+# Copyright (C) 2025 Nethesis S.r.l.
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
+import os
+import agent
 
-exec 1>&2
-
-# we need to create a log folder for the upgrade to 20230404
-if [[ "$PREV_DOKUWIKI_IMAGE" == "docker.io/bitnami/dokuwiki:20200729.0.0-debian-10-r299" ]]; then
-    /usr/bin/podman run -d --rm --name dokuwiki_upgrade -v dokuwiki-data:/bitnami/dokuwiki:z ${DOKUWIKI_IMAGE}
-    /usr/bin/podman exec -ti dokuwiki_upgrade mkdir -vp /bitnami/dokuwiki/data/log
-    /usr/bin/podman stop dokuwiki_upgrade
-fi
+# test if the secrets.env is not present
+if not os.path.exists("secrets.env"):
+    # if not present, create it
+    passwords = {
+        "DOKUWIKI_PASSWORD": os.environ["DOKUWIKI_PASSWORD"],
+    }
+    agent.write_envfile("secrets.env", passwords)
+    agent.unset_env("DOKUWIKI_PASSWORD")
