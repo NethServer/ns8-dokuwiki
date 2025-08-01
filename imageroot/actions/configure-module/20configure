@@ -52,7 +52,6 @@ else:
 # Setup configuration from user input.
 agent.set_env("DOKUWIKI_WIKI_NAME", wiki_name)
 agent.set_env("DOKUWIKI_USERNAME", username)
-agent.set_env("DOKUWIKI_PASSWORD", password)
 agent.set_env("DOKUWIKI_EMAIL", email)
 agent.set_env("DOKUWIKI_FULL_NAME", full_name)
 
@@ -63,3 +62,9 @@ agent.set_env("PHP_TIMEZONE", "UTC")
 
 # Setup LDAP domain
 agent.set_env("LDAP_DOMAIN", ldap_domain)
+
+# setup dokuwiki password
+secrets_env = {
+    "DOKUWIKI_PASSWORD": password,
+}
+agent.write_envfile("secrets.env", secrets_env)
