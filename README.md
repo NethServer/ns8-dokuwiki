@@ -1,7 +1,7 @@
 # Dokuwiki
 
 Start and configure a Dokuwiki instance.
-The module uses [Bitnami DokuWiki image](https://github.com/bitnami/bitnami-docker-dokuwiki).
+The module uses [DokuWiki image](https://hub.docker.com/r/dokuwiki/dokuwiki).
 
 ## Install
 
