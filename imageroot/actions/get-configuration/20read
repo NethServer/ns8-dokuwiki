@@ -38,8 +38,7 @@ env = f'module/{os.environ["MODULE_ID"]}/environment'
 config["wiki_name"] = os.getenv("DOKUWIKI_WIKI_NAME")
 config["username"] = os.getenv("DOKUWIKI_USERNAME");
 
-secrets = agent.read_envfile("secrets.env")
-config["password"] = secrets.get("DOKUWIKI_PASSWORD")
+config["password"] = agent.read_envfile("secrets.env")["DOKUWIKI_PASSWORD"] if os.path.exists("secrets.env") else None
 
 config["email"] = os.getenv("DOKUWIKI_EMAIL");
 config["user_full_name"] = os.getenv("DOKUWIKI_FULL_NAME");
