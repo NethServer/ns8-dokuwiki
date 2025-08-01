@@ -1,0 +1,83 @@
+{
+    "status": {
+        "size": "அளவு",
+        "name": "பெயர்",
+        "failed_services": "{num} தோல்வியுற்ற பணி | {num} தோல்வியுற்ற சேவைகள்",
+        "created": "உருவாக்கப்பட்டது",
+        "no_images": "No images",
+        "app_volumes": "பயன்பாட்டு தொகுதி | பயன்பாட்டு தொகுதிகள்",
+        "services": "பணி | சேவைகள்",
+        "app_images": "பயன்பாட்டு படம் | பயன்பாட்டு படங்கள்",
+        "dokuwiki_webapp": "டோகுவிகி வெப்ஆப்",
+        "active_services": "{num} செயலில் பணி | {num} செயலில் உள்ள சேவைகள்",
+        "open_webapp": "திறந்த டோகுவிகி",
+        "no_services": "சேவைகள் இல்லை",
+        "inactive_services": "{num} செயலற்ற பணி | {num} செயலற்ற சேவைகள்",
+        "configure": "Configure",
+        "app_instance": "பயன்பாட்டு நிகழ்வு",
+        "mount": "மவுண்ட்",
+        "title": "நிலை",
+        "not_configured": "Not configured",
+        "installation_node": "நிறுவல் முனை",
+        "node": "கணு",
+        "no_volumes": "No volumes"
+    },
+    "settings": {
+        "admin_username": "நிர்வாகி பயனர்பெயர்",
+        "configuring": "உள்ளமைத்தல் ...",
+        "wiki_fqdn": "விக்கி fqdn",
+        "disabled": "Disabled",
+        "instance_configuration": "Configure {instance}",
+        "http_to_https": "Http பெறுநர் https",
+        "choose_the_ldap_domain_to_authenticate_users": "பயனர்களை அங்கீகரிக்க LDAP களத்தைத் தேர்வுசெய்க, அல்லது உள் அங்கீகாரத்தைப் பயன்படுத்தவும்",
+        "ldap_domain": "LDAP டொமைன்",
+        "internal_authentication": "உள் ஏற்பு",
+        "go_to_dokuwiki": "டோகுவிகிக்குச் செல்லுங்கள்",
+        "dokuwiki_note": "குறிப்பு",
+        "admin_email": "நிர்வாகி மின்னஞ்சல் முகவரி",
+        "admin_password": "நிர்வாகி கடவுச்சொல்",
+        "lets_encrypt": "குறியாக்கம் செய்வோம்",
+        "host_format": "Must be a valid fully qualified domain name",
+        "email_format": "தவறான மின்னஞ்சல் முகவரி",
+        "save": "Save",
+        "enabled": "Enabled",
+        "wiki_name": "விக்கி பெயர்",
+        "admin_full_name": "நிர்வாகி முழு பெயர்",
+        "show_password": "கடவுச்சொல்லைக் காட்டு",
+        "host_pattern": "Must be a valid fully qualified domain name",
+        "title": "Settings",
+        "choose_ldap_domain": "LDAP டொமைனைத் தேர்வுசெய்க",
+        "must_be_configured_inside_dokuwiki": "இந்த பக்கத்தில் நீங்கள் டோகுவிகி fqdn மற்றும் அங்கீகாரத்தை மட்டுமே உள்ளமைக்க முடியும். பிற அமைப்பை உள்ளமைக்க டோகுவிகி வெப்ஆப்பிற்குச் செல்லவும்",
+        "hide_password": "கடவுச்சொல்லை மறைக்கவும்"
+    },
+    "about": {
+        "title": "About"
+    },
+    "error": {
+        "generic_error": "Something went wrong",
+        "403": "Operation not authorized",
+        "401": "Invalid authentication",
+        "cannot_retrieve_installed_modules": "Cannot retrieve installed modules",
+        "cannot_retrieve_module_info": "Cannot retrieve module info",
+        "cannot_retrieve_configuration": "Cannot retrieve configuration",
+        "error": "Error",
+        "network_timeout": "Network timeout",
+        "404": "Resource not found",
+        "network_error": "Network error",
+        "validation_error": "Validation error"
+    },
+    "common": {
+        "required": "தேவை",
+        "work_in_progress": "வேலை முன்னேற்றத்தில் உள்ளது"
+    },
+    "action": {
+        "get-module-info": "Get module info",
+        "get-status": "Get status",
+        "configure-module": "Configure module",
+        "get-configuration": "Get configuration",
+        "get-name": "Get name"
+    },
+    "task": {
+        "cannot_create_task": "Cannot create task {action}"
+    }
+}
