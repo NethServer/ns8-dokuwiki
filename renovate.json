@@ -1,15 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
-  "ignorePaths": ["**/ui/**", "**/.devcontainer/**"],
+  "extends": ["local>NethServer/.github:ns8"],
   "regexManagers": [
     {
       "fileMatch": ["build-images.sh"],
       "matchStrings": [
-        "docker\\.io/dokuwiki/dokuwiki:(?<currentValue>[-0-9\\.a-z]+)"
+        "docker\\.io/dokuwiki/dokuwiki:(?<currentValue>[0-9]{4}-[0-9]{2}-[0-9]{2}[a-z]?)"
       ],
       "datasourceTemplate": "docker",
-      "depNameTemplate": "dokuwiki/dokuwiki"
+      "depNameTemplate": "dokuwiki/dokuwiki",
+      "versioningTemplate": "loose"
     }
   ]
 }
