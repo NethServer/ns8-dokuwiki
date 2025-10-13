@@ -6,7 +6,7 @@
     {
       "fileMatch": ["build-images.sh"],
       "matchStrings": [
-        "docker\\.io/dokuwiki/dokuwiki:(?<currentValue>[-0-9\\.a-z]+)"
+        "docker\\.io/dokuwiki/dokuwiki:(?<currentValue>[0-9a-zA-Z\\.-]+)"
       ],
       "datasourceTemplate": "docker",
       "depNameTemplate": "dokuwiki/dokuwiki"
