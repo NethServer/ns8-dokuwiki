@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+
+#
+# Copyright (C) 2025 Nethesis S.r.l.
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+
+import agent
+import os
+
+# Setup PHP with safe defaults
+defaults = {
+    "PHP_MEMORYLIMIT": "512M",
+    "PHP_UPLOADLIMIT": "256M",
+    "PHP_TIMEZONE": "UTC"
+}
+
+for key, value in defaults.items():
+    if key not in os.environ:
+        agent.set_env(key, value)
