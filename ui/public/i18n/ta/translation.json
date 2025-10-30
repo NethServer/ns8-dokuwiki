@@ -61,7 +61,7 @@
         "cannot_retrieve_module_info": "Cannot retrieve module info",
         "cannot_retrieve_configuration": "Cannot retrieve configuration",
         "error": "Error",
-        "network_timeout": "Network timeout",
+        "network_timeout": "பிணைய நேரம் முடிந்தது",
         "404": "Resource not found",
         "network_error": "Network error",
         "validation_error": "Validation error"
