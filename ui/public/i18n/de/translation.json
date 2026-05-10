@@ -24,7 +24,7 @@
         "dokuwiki_webapp": "DokuWiki Webanwendung",
         "not_configured": "nicht konfiguriert",
         "open_webapp": "DokuWiki öffnen",
-        "configure": "Konfigurieren"
+        "configure": "konfigurieren"
     },
     "settings": {
         "wiki_name": "Wiki-Name",
@@ -62,7 +62,7 @@
         "network_error": "Netzwerk-Fehler",
         "network_timeout": "Netzwerk-Zeitüberschreitung",
         "401": "Authentifizierung fehlerhaft",
-        "403": "Vorgang nicht autorisiert",
+        "403": "Vorgang nicht zulässig",
         "cannot_retrieve_module_info": "Fehler beim Abruf der Modul-Info",
         "cannot_retrieve_installed_modules": "Fehler beim Abruf installierter Module",
         "validation_error": "Fehler bei der Validierung",
