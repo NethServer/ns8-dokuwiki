@@ -58,6 +58,10 @@
               <span class="label">{{ core.$t("common.version") }}</span>
               <span class="value">{{ version }}</span>
             </div>
+            <div v-if="app.upstream_name" class="key-value-setting">
+              <span class="label">{{ $t("about.upstream_version") }}</span>
+              <span class="value">{{ app.upstream_name }}</span>
+            </div>
             <div class="key-value-setting">
               <span class="label">{{
                 core.$tc("software_center.categories", app.categories.length)
