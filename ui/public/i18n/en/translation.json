@@ -55,8 +55,7 @@
         "internal_authentication": "Internal authentication"
     },
     "about": {
-        "title": "About",
-        "upstream_version": "Dokuwiki version"
+        "title": "About"
     },
     "task": {
         "cannot_create_task": "Cannot create task {action}"
