@@ -1,6 +1,6 @@
 {
   "name": "Dokuwiki",
-  "upstream_name": "Dokuwiki (version set automatically)",
+  "upstream_name": "Dokuwiki version set automatically",
   "description": {
     "en": "The wiki that doesn't require a database",
     "it": "Il wiki che non richiede un database"
