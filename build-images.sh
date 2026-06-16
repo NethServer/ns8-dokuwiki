@@ -29,6 +29,24 @@ images=()
 repobase="${REPOBASE:-ghcr.io/nethserver}"
 # Configure the image name
 reponame="dokuwiki"
+dokuwiki_image="docker.io/dokuwiki/dokuwiki:2025-05-14b"
+
+# Extract the upstream version from the image tag, to set it in the metadata
+dokuwiki_upstream_version="${dokuwiki_image##*:}"
+metadata_file="ui/public/metadata.json"
+metadata_backup=$(mktemp)
+
+cleanup() {
+    cp "${metadata_backup}" "${metadata_file}"
+    rm -f "${metadata_backup}"
+}
+
+cp "${metadata_file}" "${metadata_backup}"
+trap cleanup EXIT
+
+jq --arg v "${dokuwiki_upstream_version}" \
+   '.upstream_name |= gsub("version set automatically"; $v)' \
+   "${metadata_file}" > "${metadata_file}.tmp" && mv "${metadata_file}.tmp" "${metadata_file}"
 
 # Create a new empty container image
 container=$(buildah from scratch)
@@ -54,7 +72,7 @@ buildah config --entrypoint=/ \
     --label="org.nethserver.tcp-ports-demand=1" \
     --label="org.nethserver.rootfull=0" \
     --label="org.nethserver.authorizations=traefik@any:routeadm cluster:accountconsumer" \
-    --label="org.nethserver.images=docker.io/dokuwiki/dokuwiki:2025-05-14b" \
+    --label="org.nethserver.images=${dokuwiki_image}" \
     "${container}"
 # Commit everything
 buildah commit "${container}" "${repobase}/${reponame}"
