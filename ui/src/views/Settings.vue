@@ -37,7 +37,10 @@
             :line-count="15"
             width="80%"
           ></cv-skeleton-text>
-          <cv-form v-show="!(loading.getConfiguration || loading.configureModule)" @submit.prevent="configureModule">
+          <cv-form
+            v-show="!(loading.getConfiguration || loading.configureModule)"
+            @submit.prevent="configureModule"
+          >
             <cv-text-input
               v-if="!already_set"
               :label="$t('settings.wiki_name')"
