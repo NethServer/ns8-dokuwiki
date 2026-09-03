@@ -10,9 +10,9 @@ Environment=PODMAN_SYSTEMD_UNIT=%n
 # All configuration is saved inside the environment file including:
 # - DOKUWIKI_IMAGE: the podman/docker image to rung
 # - TCP_PORT, TCP_PORTS: the random ports assigned by system
-EnvironmentFile=%S/state/environment
-EnvironmentFile=-%S/state/discovery_ldap.env
-WorkingDirectory=%S/state
+EnvironmentFile=%E/state/environment
+EnvironmentFile=-%E/state/discovery_ldap.env
+WorkingDirectory=%E/state
 Restart=always
 ExecStartPre=/usr/local/bin/runagent discover-ldap
 ExecStartPre=/usr/local/bin/runagent write-ldap-conf
@@ -23,7 +23,7 @@ ExecStart=/usr/bin/podman run --conmon-pidfile %t/dokuwiki.pid \
     --cidfile %t/dokuwiki.ctr-id \
     --cgroups=no-conmon \
     --replace --name dokuwiki -d \
-    --env-file=%S/state/environment \
+    --env-file=%E/state/environment \
     --publish 127.0.0.1:${TCP_PORT}:8080 \
     --volume dokuwiki-data:/storage:z \
     --network=slirp4netns:allow_host_loopback=true \
