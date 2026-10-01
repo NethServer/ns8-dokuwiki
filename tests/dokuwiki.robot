@@ -2,6 +2,19 @@
 Library    SSHLibrary
 Resource    api.resource
 
+*** Variables ***
+${ADMIN_USER}    admin
+${ADMIN_PASSWORD}    Nethesis,1234
+
+*** Keywords ***
+Login to cluster-admin
+    New Page    https://${NODE_ADDR}/cluster-admin/
+    Fill Text    text="Username"    ${ADMIN_USER}
+    Click    button >> text="Continue"
+    Fill Text    text="Password"    ${ADMIN_PASSWORD}
+    Click    button >> text="Log in"
+    Wait For Elements State    css=#main-content    visible    timeout=10s
+
 *** Test Cases ***
 Check if dokuwiki is installed correctly
     ${output}  ${rc} =    Execute Command    add-module ${IMAGE_URL} 1
@@ -19,6 +32,22 @@ Check if dokuwiki works as expected
     ${output}  ${rc} =    Execute Command    sleep 10 && curl -H "Host: dokuwiki.test.local" -fkL https://127.0.0.1/
     ...    return_rc=True  return_stdout=True
     Should Be Equal As Integers    ${rc}  0
+
+Take screenshots
+    [Tags]    ui
+    Import Library    Browser
+    New Browser    chromium    headless=True
+    New Context    ignoreHTTPSErrors=True
+    Login to cluster-admin
+    Go To    https://${NODE_ADDR}/cluster-admin/#/apps/${module_id}
+    Wait For Elements State    iframe >>> h2 >> text="Status"    visible    timeout=10s
+    Sleep    5s
+    Take Screenshot    filename=${OUTPUT DIR}/browser/screenshot/1._Status.png
+    Go To    https://${NODE_ADDR}/cluster-admin/#/apps/${module_id}?page=settings
+    Wait For Elements State    iframe >>> h2 >> text="Settings"    visible    timeout=10s
+    Sleep    5s
+    Take Screenshot    filename=${OUTPUT DIR}/browser/screenshot/2._Settings.png
+    Close Browser
 
 Check if dokuwiki is removed correctly
     ${rc} =    Execute Command    remove-module --no-preserve ${module_id}
