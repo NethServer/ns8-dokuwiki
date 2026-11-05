@@ -52,10 +52,15 @@ jq --arg v "${dokuwiki_upstream_version}" \
 # Create a new empty container image
 container=$(buildah from scratch)
 
+# Node.js 25+ no longer ships Corepack, install it from npm
+# renovate: datasource=npm packageName=corepack
+corepack_version=0.36.0
+
 # Reuse existing nodebuilder-dokuwiki container, to speed up builds
 if ! buildah containers --format "{{.ContainerName}}" | grep -q nodebuilder-dokuwiki; then
     echo "Pulling NodeJS runtime..."
-    buildah from --name nodebuilder-dokuwiki -v "${PWD}:/usr/src:Z" docker.io/library/node:lts
+    buildah from --name nodebuilder-dokuwiki -v "${PWD}:/usr/src:Z" docker.io/library/node:26.13.0-slim
+    buildah run nodebuilder-dokuwiki sh -c "npm install -g corepack@${corepack_version} && corepack enable"
 fi
 
 echo "Build static UI files with node..."
@@ -63,7 +68,7 @@ buildah run \
     --workingdir=/usr/src/ui \
     --env="NODE_OPTIONS=--openssl-legacy-provider" \
     nodebuilder-dokuwiki \
-    sh -c "corepack enable && yarn install && yarn build"
+    sh -c "yarn install && yarn build"
 
 # Add imageroot directory to the container image
 buildah add "${container}" imageroot /imageroot
