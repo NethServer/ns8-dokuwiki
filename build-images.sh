@@ -29,7 +29,7 @@ images=()
 repobase="${REPOBASE:-ghcr.io/nethserver}"
 # Configure the image name
 reponame="dokuwiki"
-dokuwiki_image="docker.io/dokuwiki/dokuwiki:2026-07-14c@sha256:c47f96aff3980f56a29d50ac778eb32bc67aa0081e03c62b2721fd170bbc7841"
+dokuwiki_image="docker.io/dokuwiki/dokuwiki:2026-07-14c@sha256:a289deab45e2d4cbc8b6db1c228955d4dccac0d78da9dcf482adfa12e6641ed1"
 
 # Extract the upstream version from the image tag, to set it in the metadata
 dokuwiki_upstream_version="${dokuwiki_image%@*}"
